@@ -1,10 +1,12 @@
+import sys
+sys.path.append('/content/lstmnowcast/')
 import logging
 import cv2
 import numpy as np
 import math
 import os
 #from config import cfg
-import config as cfg
+import nowcasting.config as cfg
 
 logger = logging.getLogger(__name__)
 
