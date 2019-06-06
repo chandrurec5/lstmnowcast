@@ -3,7 +3,8 @@ import cv2
 import numpy as np
 import math
 import os
-from nowcasting.config import cfg
+#from config import cfg
+import config as cfg
 
 logger = logging.getLogger(__name__)
 
