@@ -3,7 +3,7 @@ import os
 import yaml
 import logging
 from collections import OrderedDict
-from .helpers.ordered_easydict import OrderedEasyDict as edict
+from helpers.ordered_easydict import OrderedEasyDict as edict
 
 __C = edict()
 cfg = __C  # type: edict()
