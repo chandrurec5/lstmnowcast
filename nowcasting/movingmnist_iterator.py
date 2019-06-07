@@ -23,7 +23,7 @@ def load_mnist(training_num=50000):
 
     """
 #    print(cfg.ROOT_DIR)
-    data_path = os.path.join(cfg.MNIST_PATH, "mnist.npz")
+    data_path = os.path.join("/content/lstmnowcast/nowcastin/mnist_data/", "mnist.npz")
     if not os.path.isfile(data_path):
         origin = (
             'https://github.com/sxjscience/mxnet/raw/master/example/bayesian-methods/mnist.npz'
