@@ -15,7 +15,8 @@ __C.SEED = None
 # Dataset name
 # Used by symbols factories who need to adjust for different
 # inputs based on dataset used. Should be set by the script.
-__C.DATASET = None
+__C.DATASET = MNIST
+print(__C.DATASET)
 
 # Project directory, since config.py is supposed to be in $ROOT_DIR/nowcasting
 __C.ROOT_DIR = os.path.abspath('/content/lstmnowcast')
