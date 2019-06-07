@@ -22,7 +22,7 @@ def load_mnist(training_num=50000):
     -------
 
     """
-    print(cfg.MNIST_PATH)
+    print(cfg.ROOT_DIR)
     data_path = os.path.join(cfg.MNIST_PATH, "mnist.npz")
     if not os.path.isfile(data_path):
         origin = (
