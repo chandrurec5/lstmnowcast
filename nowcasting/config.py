@@ -18,8 +18,8 @@ __C.SEED = None
 __C.DATASET = None
 
 # Project directory, since config.py is supposed to be in $ROOT_DIR/nowcasting
-__C.ROOT_DIR = os.path.abspath('/content/lstmnowcast')
-print(__C.ROOT_DIR)
+__C.ROOT_DIR = os.path.abspath('/content/lstmnowcast/nowcasting')
+
 
 __C.MNIST_PATH = os.path.join(__C.ROOT_DIR, 'mnist_data')
 if not os.path.exists(__C.MNIST_PATH):
