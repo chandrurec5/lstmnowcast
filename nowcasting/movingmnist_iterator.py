@@ -191,7 +191,7 @@ class MovingMNISTAdvancedIterator(object):
         self.mnist_train_img, self.mnist_train_label,\
         self.mnist_test_img, self.mnist_test_label = load_mnist()
         self._digit_num = digit_num if digit_num is not None else config.MOVINGMNIST.DIGIT_NUM
-        self._img_size = img_size if img_size is not None else config..MOVINGMNIST.IMG_SIZE
+        self._img_size = img_size if img_size is not None else config.MOVINGMNIST.IMG_SIZE
         self._distractor_size = distractor_size
         self._distractor_num = distractor_num if distractor_num is not None else config.__C.MOVINGMNIST.DISTRACTOR_NUM
         self._max_velocity_scale = max_velocity_scale
