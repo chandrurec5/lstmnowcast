@@ -6,7 +6,7 @@ import numpy as np
 import math
 import os
 #from config import cfg
-import nowcasting.config as cfg
+import nowcasting.config as config
 
 logger = logging.getLogger(__name__)
 
@@ -22,7 +22,8 @@ def load_mnist(training_num=50000):
     -------
 
     """
-#    print(cfg.ROOT_DIR)
+    print(config.__C.ROOT_DIR)
+    print(config.__C.MOVINGMNIST.DIGIT_NUM)
     data_path = os.path.join("/content/lstmnowcast/nowcasting/mnist_data/", "mnist.npz")
     if not os.path.isfile(data_path):
         origin = (
@@ -189,10 +190,10 @@ class MovingMNISTAdvancedIterator(object):
         """
         self.mnist_train_img, self.mnist_train_label,\
         self.mnist_test_img, self.mnist_test_label = load_mnist()
-        self._digit_num = digit_num if digit_num is not None else cfg.__C.MOVINGMNIST.DIGIT_NUM
-        self._img_size = img_size if img_size is not None else cfg.__C.MOVINGMNIST.IMG_SIZE
+        self._digit_num = digit_num if digit_num is not None else config.__C.MOVINGMNIST.DIGIT_NUM
+        self._img_size = img_size if img_size is not None else config.__C.MOVINGMNIST.IMG_SIZE
         self._distractor_size = distractor_size
-        self._distractor_num = distractor_num if distractor_num is not None else cfg.__C.MOVINGMNIST.DISTRACTOR_NUM
+        self._distractor_num = distractor_num if distractor_num is not None else config.__C.MOVINGMNIST.DISTRACTOR_NUM
         self._max_velocity_scale = max_velocity_scale
         self._initial_velocity_range = initial_velocity_range
         self._acceleration_range = acceleration_range
