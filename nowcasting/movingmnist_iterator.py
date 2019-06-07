@@ -22,7 +22,7 @@ def load_mnist(training_num=50000):
     -------
 
     """
-    data_path = os.path.join(cfg.MNIST_PATH, "mnist.npz")
+    data_path = os.path.join(cfg.cfg.MNIST_PATH, "mnist.npz")
     if not os.path.isfile(data_path):
         origin = (
             'https://github.com/sxjscience/mxnet/raw/master/example/bayesian-methods/mnist.npz'
@@ -188,10 +188,10 @@ class MovingMNISTAdvancedIterator(object):
         """
         self.mnist_train_img, self.mnist_train_label,\
         self.mnist_test_img, self.mnist_test_label = load_mnist()
-        self._digit_num = digit_num if digit_num is not None else cfg.MOVINGMNIST.DIGIT_NUM
-        self._img_size = img_size if img_size is not None else cfg.MOVINGMNIST.IMG_SIZE
+        self._digit_num = digit_num if digit_num is not None else cfg.cfg.MOVINGMNIST.DIGIT_NUM
+        self._img_size = img_size if img_size is not None else cfg.cfg.MOVINGMNIST.IMG_SIZE
         self._distractor_size = distractor_size
-        self._distractor_num = distractor_num if distractor_num is not None else cfg.MOVINGMNIST.DISTRACTOR_NUM
+        self._distractor_num = distractor_num if distractor_num is not None else cfg.cfg.MOVINGMNIST.DISTRACTOR_NUM
         self._max_velocity_scale = max_velocity_scale
         self._initial_velocity_range = initial_velocity_range
         self._acceleration_range = acceleration_range
