@@ -190,6 +190,7 @@ class MovingMNISTAdvancedIterator(object):
         """
         self.mnist_train_img, self.mnist_train_label,\
         self.mnist_test_img, self.mnist_test_label = load_mnist()
+        print(config.__C.MOVINGMNIST.DIGIT_NUM)
         self._digit_num = digit_num if digit_num is not None else config.MOVINGMNIST.DIGIT_NUM
         self._img_size = img_size if img_size is not None else config.MOVINGMNIST.IMG_SIZE
         self._distractor_size = distractor_size
