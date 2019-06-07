@@ -188,7 +188,7 @@ class MovingMNISTAdvancedIterator(object):
         period : period of the
         index_range
         """
-	print(config.__C.MOVINGMNIST.DIGIT_NUM)
+        print(config.__C.MOVINGMNIST.DIGIT_NUM)
         self.mnist_train_img, self.mnist_train_label,\
         self.mnist_test_img, self.mnist_test_label = load_mnist()
         self._digit_num = digit_num if digit_num is not None else config.__C.MOVINGMNIST.DIGIT_NUM
